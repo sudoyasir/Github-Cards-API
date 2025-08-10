@@ -1,44 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
-html.dark {
-  background: #0f172a
-}
+html.dark { background: #0f172a }
 
+/* Global font (kept) */
 *,
 #lccp_modes_wrap span,
 .pccp_circle_f_wrap span {
   font-family: "Jost", sans-serif !important;
 }
 
+/* Keep your picker input look & feel (library unchanged) */
 input.color_picker {
-  /* color: black !important; */
   color: white;
   background-color: rgb(55, 65, 81);
   border-color: rgb(75, 85, 99);
 }
 
-.lccp-preview-right {
-  border-radius: 5px;
-  width: 100%;
-}
-
-.lccp-preview-right span {
-  border-radius: 0 5px 5px 0;
-}
-
-.lccp-preview-right input {
-  border-radius: 5px;
-}
+.lccp-preview-right { border-radius: 5px; width: 100%; }
+.lccp-preview-right span { border-radius: 0 5px 5px 0; }
+.lccp-preview-right input { border-radius: 5px; }
 
 #lccp_modes_wrap span,
 .pccp_circle_f_wrap span {
   color: #000 !important;
 }
 
-
-.copy-btn {
-  position: relative;
-}
+/* Copy tooltip */
+.copy-btn { position: relative; }
 
 .copy-btn::after {
   content: attr(data-tooltip);

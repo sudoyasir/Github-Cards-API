@@ -10,319 +10,348 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config = { darkMode: "class" };</script>
 
-  <!-- Flowbite (plain-JS UI widgets) -->
+  <!-- Flowbite -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" />
-
-  <!-- Pickr colour-picker -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css" />
 
   <link rel="stylesheet" href="./style.css">
 </head>
 
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100
-           min-h-screen flex items-center justify-center p-6">
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen">
 
-  <div class="w-full max-w-3xl bg-white dark:bg-gray-800 shadow-2xl
-             rounded-2xl p-8 space-y-10">
-
-    <h1 class="text-center text-4xl font-extrabold">
-      GitHub Card Generator
-    </h1>
-
-    <!-- =========================  FORM  ========================= -->
-    <form id="cardForm" class="space-y-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Card type -->
+  <!-- Top bar -->
+  <header
+    class="sticky top-0 z-30 backdrop-blur bg-white/70 dark:bg-gray-900/70 border-b border-gray-200/70 dark:border-gray-800/70">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
         <div>
-          <label for="cardSelect" class="block mb-2 text-sm font-medium">
-            Card type
-          </label>
-          <select id="cardSelect" name="card_name" required class="block w-full rounded-lg border border-gray-300 bg-gray-50
-                     p-2.5 text-sm focus:ring-indigo-500 focus:border-indigo-500
-                     dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100">
-            <option value="" disabled selected hidden>Select a card…</option>
-          </select>
-        </div>
-
-        <!-- Theme -->
-        <div>
-          <label for="themeSelect" class="block mb-2 text-sm font-medium">
-            Theme
-          </label>
-          <select id="themeSelect" name="theme" required class="block w-full rounded-lg border border-gray-300 bg-gray-50
-                     p-2.5 text-sm focus:ring-indigo-500 focus:border-indigo-500
-                     dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100">
-            <option value="" disabled selected hidden>Select a theme…</option>
-          </select>
+          <h1 class="text-lg sm:text-xl font-extrabold leading-tight">GitHub Card Generator</h1>
+          <p class="text-xs text-gray-500 dark:text-gray-400 hidden sm:block">Build, preview, and embed customizable
+            GitHub cards.</p>
         </div>
       </div>
 
-      <div id="customTextWapper" class="hidden mt-4">
-        <label for="customText" class="block mb-2 text-sm font-medium">
-          Custom Text
-        </label>
-        <textarea id="customText" name="customText" rows="3"
-          class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm focus:ring-indigo-500 focus:border-indigo-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 dark:placeholder-gray-400"
-          placeholder="Write your text here..."></textarea>
-      </div>
-
-      <!-- ---------- Custom theme options (shown only for custom) ---------- -->
-      <div id="customWrapper" class="hidden space-y-8">
-        <h3 class="text-lg font-semibold">Custom theme options</h3>
-
-        <!-- colour blocks -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- card colour -->
-           
-          <div class="relative">
-            <legend class="mb-2 text-sm font-medium">Card colour</legend>
-            <button type="button"
-              class="absolute right-0 -top-[2px] text-gray-400 transition p-1 w-fit random-grad-gen-btn" data-target="cardColorHex">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="w-5 h-5 fill-white hover:fill-indigo-500 transition-colors duration-200 ease-in-out"><path d="M274.9 34.3c-28.1-28.1-73.7-28.1-101.8 0L34.3 173.1c-28.1 28.1-28.1 73.7 0 101.8L173.1 413.7c28.1 28.1 73.7 28.1 101.8 0L413.7 274.9c28.1-28.1 28.1-73.7 0-101.8L274.9 34.3zM200 224a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM96 200a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM224 376a24 24 0 1 1 0-48 24 24 0 1 1 0 48zM352 200a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM224 120a24 24 0 1 1 0-48 24 24 0 1 1 0 48zm96 328c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-192c0-35.3-28.7-64-64-64l-114.3 0c11.6 36 3.1 77-25.4 105.5L320 413.8l0 34.2zM480 328a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg>
-            </button>
-            <input type="text" id="cardColorHex" name="cardColorHex" class="color_picker" value="#fff" />
-          </div>
-
-          <!-- background colour -->
-          <div class="relative">
-            <legend class="mb-2 text-sm font-medium">
-              Background colour
-            </legend>
-            <button type="button"
-              class="absolute right-0 -top-[2px] text-gray-400 transition p-1 w-fit random-grad-gen-btn" data-target="bgColorHex">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="w-5 h-5 fill-white hover:fill-indigo-500 transition-colors duration-200 ease-in-out"><path d="M274.9 34.3c-28.1-28.1-73.7-28.1-101.8 0L34.3 173.1c-28.1 28.1-28.1 73.7 0 101.8L173.1 413.7c28.1 28.1 73.7 28.1 101.8 0L413.7 274.9c28.1-28.1 28.1-73.7 0-101.8L274.9 34.3zM200 224a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM96 200a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM224 376a24 24 0 1 1 0-48 24 24 0 1 1 0 48zM352 200a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM224 120a24 24 0 1 1 0-48 24 24 0 1 1 0 48zm96 328c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-192c0-35.3-28.7-64-64-64l-114.3 0c11.6 36 3.1 77-25.4 105.5L320 413.8l0 34.2zM480 328a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg>
-            </button>
-            <input type="text" id="bgColorHex" name="bgColorHex" class="color_picker" value="#fff" />
-          </div>
-        </div>
-
-        <!-- font & shadow colour pickers -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <legend class="mb-2 text-sm font-medium">Font colour</legend>
-            <input type="text" id="fontColorHex" name="fontColorHex" class="color_picker" value="#000" />
-          </div>
-
-          <div>
-            <legend class="mb-2 text-sm font-medium">Shadow colour</legend>
-            <input type="text" id="shadowColorHex" name="shadowColorHex" class="color_picker" value="#000" />
-          </div>
-        </div>
-
-
-        <div>
-          <label for="customGoogleFont" class="text-sm font-medium">Google Font</label>
-          <input type="text" id="customGoogleFont" name="customGoogleFont" placeholder="e.g. Noto Sans"
-            class="mt-2 bg-gray-700 border border-gray-600 text-white text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" />
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="relative">
-            <label for="fontSizeRange" class="block mb-2 text-sm font-medium">
-              Font Size <span id="fontSizeRangeLabel"
-                class="ml-2 text-xs text-gray-500 dark:text-gray-400">(16px)</span>
-            </label>
-            <!-- Reset icon button -->
-            <button type="button"
-              class="absolute right-0 -top-[2px] text-gray-400 hover:text-red-500 transition p-1 w-fit reset-btn" data-target="fontSizeRange" data-val="16">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                class="w-4 h-4 fill-white hover:fill-red-500 transition-colors duration-200 ease-in-out">
-                <path
-                  d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z" />
-              </svg>
-            </button>
-            <input type="range" id="fontSizeRange" name="fontSize" min="8" max="72" value="16"
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 dynamic-range"
-              data-target="fontSizeRangeLabel" />
-          </div>
-
-          <div>
-          <label for="textAlignment" class="block mb-2 text-sm font-medium">
-            Text Alignment
-          </label>
-          <select id="textAlignment" name="textAlignment"
-            class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm focus:ring-indigo-500 focus:border-indigo-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100">
-            <option value="" disabled selected>Select text alignment...</option>
-              <option value="tl">Top Left</option>
-              <option value="tm">Top Mid</option>
-              <option value="tr">Top Right</option>
-              <option value="ml">Mid Left</option>
-              <option value="mm">Mid Mid</option>
-              <option value="mr">Mid Right</option>
-              <option value="bl">Bottom Left</option>
-              <option value="bm">Bottom Mid</option>
-              <option value="br">Bottom Right</option>
-            </select>
-          </div>
-
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="relative">
-            <label for="innerPadRange" class="block mb-2 text-sm font-medium">
-              Inner Card Padding <span id="innerPadRangeLabel"
-                class="ml-2 text-xs text-gray-500 dark:text-gray-400">(15px)</span>
-            </label>
-            <!-- Reset icon button -->
-            <button type="button"
-              class="absolute right-0 -top-[2px] text-gray-400 hover:text-red-500 transition p-1 w-fit reset-btn" data-target="innerPadRange" data-val="15">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                class="w-4 h-4 fill-white hover:fill-red-500 transition-colors duration-200 ease-in-out">
-                <path
-                  d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z" />
-              </svg>
-            </button>
-            <input type="range" id="innerPadRange" name="innerPad" min="0" max="50" value="15"
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 dynamic-range"
-              data-target="innerPadRangeLabel" />
-          </div>
-          <div class="relative">
-            <label for="outerPadRange" class="block mb-2 text-sm font-medium">
-              Outer Card Padding <span id="outerPadRangeLabel"
-                class="ml-2 text-xs text-gray-500 dark:text-gray-400">(15px)</span>
-            </label>
-            <!-- Reset icon button -->
-            <button type="button"
-              class="absolute right-0 -top-[2px] text-gray-400 hover:text-red-500 transition p-1 w-fit reset-btn" data-target="outerPadRange" data-val="15">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                class="w-4 h-4 fill-white hover:fill-red-500 transition-colors duration-200 ease-in-out">
-                <path
-                  d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z" />
-              </svg>
-            </button>
-            <input type="range" id="outerPadRange" name="outerPad" min="0" max="50" value="15"
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 dynamic-range"
-              data-target="outerPadRangeLabel" />
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="relative">
-            <label for="cardWidthRange" class="block mb-2 text-sm font-medium">
-              Card Width <span id="cardWidthRangeLabel"
-                class="ml-2 text-xs text-gray-500 dark:text-gray-400">(400px)</span>
-            </label>
-            <!-- Reset icon button -->
-            <button type="button"
-              class="absolute right-0 -top-[2px] text-gray-400 hover:text-red-500 transition p-1 w-fit reset-btn" data-target="cardWidthRange" data-val="400">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                class="w-4 h-4 fill-white hover:fill-red-500 transition-colors duration-200 ease-in-out">
-                <path
-                  d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z" />
-              </svg>
-            </button>
-            <input type="range" id="cardWidthRange" name="cardWidth" min="50" max="1080" value="400"
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 dynamic-range"
-              data-target="cardWidthRangeLabel" />
-          </div>
-          <div class="relative">
-            <label for="cardMinHeightRange" class="block mb-2 text-sm font-medium">
-              Card Min Height <span id="cardMinHeightRangeLabel"
-                class="ml-2 text-xs text-gray-500 dark:text-gray-400">(100px)</span>
-            </label>
-            <!-- Reset icon button -->
-            <button type="button"
-              class="absolute right-0 -top-[2px] text-gray-400 hover:text-red-500 transition p-1 w-fit reset-btn" data-target="cardMinHeightRange" data-val="100">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                class="w-4 h-4 fill-white hover:fill-red-500 transition-colors duration-200 ease-in-out">
-                <path
-                  d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z" />
-              </svg>
-            </button>
-            <input type="range" id="cardMinHeightRange" name="cardMinHeight" min="50" max="1080" value="100"
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 dynamic-range"
-              data-target="cardMinHeightRangeLabel" />
-          </div>
-        </div>
-
-      </div>
-
-      <button type="submit" class="w-full py-3 rounded-lg bg-indigo-600 text-white font-semibold
-                 hover:bg-indigo-500 transition">
-        Generate card
+      <!-- Dark mode toggle -->
+      <button id="themeToggle"
+        class="inline-flex items-center gap-2 rounded-lg border border-gray-300 dark:border-gray-700 px-3 py-1.5 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+        <span id="themeToggleIcon" aria-hidden="true">🌙</span>
+        <span class="hidden sm:block">Toggle theme</span>
       </button>
-    </form>
+    </div>
+  </header>
 
-    <!-- =========================  RESULTS  ========================= -->
-    <div id="resultSection" class="hidden space-y-4">
-      <div class="flex items-center justify-between">
-        <h2 class="text-lg font-semibold">Preview</h2>
-        <a id="downloadBtn" href="#" download="github-card.png" class="text-sm text-indigo-600 hover:underline">
-          Download SVG
-        </a>
-      </div>
-      <div id="holder" class="relative flex justify-center items-center min-h-[50px]">
-        <!-- 🔄 loader -->
-        <div id="loader"
-          class="absolute w-12 h-12 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin">
-        </div>
+  <!-- Main -->
+  <main class="max-w-6xl mx-auto p-4 md:p-6 lg:p-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
 
-        <!-- real image: hidden until loaded -->
-        <img id="preview" class="max-w-full shadow-lg hidden" />
-      </div>
+      <!-- LEFT: Form -->
+      <section class="bg-white dark:bg-gray-800 shadow-2xl rounded-2xl p-6 md:p-8 space-y-8">
+        <!-- Primary selectors -->
+        <form id="cardForm" class="space-y-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Card type -->
+            <div>
+              <label for="cardSelect" class="block mb-2 text-sm font-medium">Card type</label>
+              <select id="cardSelect" name="card_name" required
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm
+                       focus:ring-indigo-500 focus:border-indigo-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100">
+                <option value="" disabled selected hidden>Select a card…</option>
+              </select>
+            </div>
 
-      <!-- ===== Markdown + HTML outputs ===== -->
-      <div class="space-y-6">
+            <!-- Theme -->
+            <div>
+              <label for="themeSelect" class="block mb-2 text-sm font-medium">Theme</label>
+              <select id="themeSelect" name="theme" required
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm
+                       focus:ring-indigo-500 focus:border-indigo-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100">
+                <option value="" disabled selected hidden>Select a theme…</option>
+              </select>
+              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400">Choose <span class="font-medium">custom</span> to
+                unlock advanced styling below.</p>
+            </div>
+          </div>
 
-        <!-- Markdown field -->
-        <div>
-          <label for="mdOutput" class="block mb-2 text-sm font-medium">
-            Markdown
-          </label>
+          <!-- Custom text for my-card -->
+          <div id="customTextWapper" class="hidden">
+            <label for="customText" class="block mb-2 text-sm font-medium">Custom Text</label>
+            <textarea id="customText" name="customText" rows="3" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm
+                     focus:ring-indigo-500 focus:border-indigo-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100
+                     dark:placeholder-gray-400" placeholder="Write your text here..."></textarea>
+          </div>
 
-          <div class="flex items-stretch">
-            <input id="mdOutput" type="text" readonly class="flex-1 rounded-l-lg border border-gray-300 bg-gray-50 p-2.5 text-sm
-                          dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100" />
+          <!-- Advanced (only for custom theme) -->
+          <div id="customWrapper" class="hidden space-y-8">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-semibold">Custom theme options</h3>
+            </div>
 
-            <!-- copy button -->
-            <button type="button" class="copy-btn relative rounded-r-lg border border-l-0 border-gray-300
-                           bg-indigo-600 px-4 text-sm font-medium text-white hover:bg-indigo-500
-                           dark:border-gray-600" data-clipboard-target="#mdOutput" data-tooltip="Copy">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="height: 20px;fill:#fff;">
-                <path
-                  d="M384 336l-192 0c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l140.1 0L400 115.9 400 320c0 8.8-7.2 16-16 16zM192 384l192 0c35.3 0 64-28.7 64-64l0-204.1c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1L192 0c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-32-48 0 0 32c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l32 0 0-48-32 0z" />
-              </svg>
+            <!-- Color blocks -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <!-- Card colour -->
+              <div class="relative">
+                <legend class="mb-2 text-sm font-medium">Card colour</legend>
+                <button type="button"
+                  class="absolute right-0 -top-[2px] text-gray-400 transition p-1 w-fit random-grad-gen-btn"
+                  title="Random gradient" data-target="cardColorHex" aria-label="Random gradient for card colour">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
+                    class="w-5 h-5 fill-white hover:fill-indigo-500 transition-colors duration-200 ease-in-out">
+                    <path
+                      d="M274.9 34.3c-28.1-28.1-73.7-28.1-101.8 0L34.3 173.1c-28.1 28.1-28.1 73.7 0 101.8L173.1 413.7c28.1 28.1 73.7 28.1 101.8 0L413.7 274.9c28.1-28.1 28.1-73.7 0-101.8L274.9 34.3zM200 224a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM96 200a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM224 376a24 24 0 1 1 0-48 24 24 0 1 1 0 48zM352 200a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM224 120a24 24 0 1 1 0-48 24 24 0 1 1 0 48zm96 328c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-192c0-35.3-28.7-64-64-64l-114.3 0c11.6 36 3.1 77-25.4 105.5L320 413.8l0 34.2zM480 328a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" />
+                  </svg>
+                </button>
+                <input type="text" id="cardColorHex" name="cardColorHex" class="color_picker" value="#fff" />
+              </div>
+
+              <!-- Background colour -->
+              <div class="relative">
+                <legend class="mb-2 text-sm font-medium">Background colour</legend>
+                <button type="button"
+                  class="absolute right-0 -top-[2px] text-gray-400 transition p-1 w-fit random-grad-gen-btn"
+                  title="Random gradient" data-target="bgColorHex" aria-label="Random gradient for background colour">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
+                    class="w-5 h-5 fill-white hover:fill-indigo-500 transition-colors duration-200 ease-in-out">
+                    <path
+                      d="M274.9 34.3c-28.1-28.1-73.7-28.1-101.8 0L34.3 173.1c-28.1 28.1-28.1 73.7 0 101.8L173.1 413.7c28.1 28.1 73.7 28.1 101.8 0L413.7 274.9c28.1-28.1 28.1-73.7 0-101.8L274.9 34.3zM200 224a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM96 200a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM224 376a24 24 0 1 1 0-48 24 24 0 1 1 0 48zM352 200a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM224 120a24 24 0 1 1 0-48 24 24 0 1 1 0 48zm96 328c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-192c0-35.3-28.7-64-64-64l-114.3 0c11.6 36 3.1 77-25.4 105.5L320 413.8l0 34.2zM480 328a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" />
+                  </svg>
+                </button>
+                <input type="text" id="bgColorHex" name="bgColorHex" class="color_picker" value="#fff" />
+              </div>
+            </div>
+
+            <!-- Font & shadow -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <legend class="mb-2 text-sm font-medium">Font colour</legend>
+                <input type="text" id="fontColorHex" name="fontColorHex" class="color_picker" value="#000" />
+              </div>
+              <div>
+                <legend class="mb-2 text-sm font-medium">Shadow colour</legend>
+                <input type="text" id="shadowColorHex" name="shadowColorHex" class="color_picker" value="#000" />
+              </div>
+            </div>
+
+            <!-- Google font -->
+            <div>
+              <label for="customGoogleFont" class="text-sm font-medium">Google Font</label>
+              <input type="text" id="customGoogleFont" name="customGoogleFont" placeholder="e.g. Noto Sans" class="mt-2 bg-gray-700 border border-gray-600 text-white text-sm rounded-lg block w-full p-2.5
+                            dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" />
+              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400">Tip: Use the font’s URL name (e.g.,
+                <code>Cascadia+Code</code>).</p>
+            </div>
+
+            <!-- Ranges + alignment -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="relative">
+                <label for="fontSizeRange" class="block mb-2 text-sm font-medium">
+                  Font Size <span id="fontSizeRangeLabel"
+                    class="ml-2 text-xs text-gray-500 dark:text-gray-400">(16px)</span>
+                </label>
+                <button type="button"
+                  class="absolute right-0 -top-[2px] text-gray-400 hover:text-red-500 transition p-1 w-fit reset-btn"
+                  data-target="fontSizeRange" data-val="16" aria-label="Reset font size">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                    class="w-4 h-4 fill-white hover:fill-red-500 transition-colors duration-200 ease-in-out">
+                    <path
+                      d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z" />
+                  </svg>
+                </button>
+                <input type="range" id="fontSizeRange" name="fontSize" min="8" max="72" value="16"
+                  class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 dynamic-range"
+                  data-target="fontSizeRangeLabel" />
+              </div>
+
+              <div>
+                <label for="textAlignment" class="block mb-2 text-sm font-medium">Text Alignment</label>
+                <select id="textAlignment" name="textAlignment"
+                  class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm
+                         focus:ring-indigo-500 focus:border-indigo-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100">
+                  <option value="" disabled selected>Select text alignment...</option>
+                  <option value="tl">Top Left</option>
+                  <option value="tm">Top Mid</option>
+                  <option value="tr">Top Right</option>
+                  <option value="ml">Mid Left</option>
+                  <option value="mm">Mid Mid</option>
+                  <option value="mr">Mid Right</option>
+                  <option value="bl">Bottom Left</option>
+                  <option value="bm">Bottom Mid</option>
+                  <option value="br">Bottom Right</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Spacing & size -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="relative">
+                <label for="innerPadRange" class="block mb-2 text-sm font-medium">
+                  Inner Card Padding <span id="innerPadRangeLabel"
+                    class="ml-2 text-xs text-gray-500 dark:text-gray-400">(15px)</span>
+                </label>
+                <button type="button"
+                  class="absolute right-0 -top-[2px] text-gray-400 hover:text-red-500 transition p-1 w-fit reset-btn"
+                  data-target="innerPadRange" data-val="15" aria-label="Reset inner padding">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                    class="w-4 h-4 fill-white hover:fill-red-500 transition-colors duration-200 ease-in-out">
+                    <path
+                      d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z" />
+                  </svg>
+                </button>
+                <input type="range" id="innerPadRange" name="innerPad" min="0" max="50" value="15"
+                  class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 dynamic-range"
+                  data-target="innerPadRangeLabel" />
+              </div>
+
+              <div class="relative">
+                <label for="outerPadRange" class="block mb-2 text-sm font-medium">
+                  Outer Card Padding <span id="outerPadRangeLabel"
+                    class="ml-2 text-xs text-gray-500 dark:text-gray-400">(15px)</span>
+                </label>
+                <button type="button"
+                  class="absolute right-0 -top-[2px] text-gray-400 hover:text-red-500 transition p-1 w-fit reset-btn"
+                  data-target="outerPadRange" data-val="15" aria-label="Reset outer padding">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                    class="w-4 h-4 fill-white hover:fill-red-500 transition-colors duration-200 ease-in-out">
+                    <path
+                      d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z" />
+                  </svg>
+                </button>
+                <input type="range" id="outerPadRange" name="outerPad" min="0" max="50" value="15"
+                  class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 dynamic-range"
+                  data-target="outerPadRangeLabel" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="relative">
+                <label for="cardWidthRange" class="block mb-2 text-sm font-medium">
+                  Card Width <span id="cardWidthRangeLabel"
+                    class="ml-2 text-xs text-gray-500 dark:text-gray-400">(400px)</span>
+                </label>
+                <button type="button"
+                  class="absolute right-0 -top-[2px] text-gray-400 hover:text-red-500 transition p-1 w-fit reset-btn"
+                  data-target="cardWidthRange" data-val="400" aria-label="Reset card width">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                    class="w-4 h-4 fill-white hover:fill-red-500 transition-colors duration-200 ease-in-out">
+                    <path
+                      d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z" />
+                  </svg>
+                </button>
+                <input type="range" id="cardWidthRange" name="cardWidth" min="50" max="1080" value="400"
+                  class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 dynamic-range"
+                  data-target="cardWidthRangeLabel" />
+              </div>
+
+              <div class="relative">
+                <label for="cardMinHeightRange" class="block mb-2 text-sm font-medium">
+                  Card Min Height <span id="cardMinHeightRangeLabel"
+                    class="ml-2 text-xs text-gray-500 dark:text-gray-400">(100px)</span>
+                </label>
+                <button type="button"
+                  class="absolute right-0 -top-[2px] text-gray-400 hover:text-red-500 transition p-1 w-fit reset-btn"
+                  data-target="cardMinHeightRange" data-val="100" aria-label="Reset min height">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                    class="w-4 h-4 fill-white hover:fill-red-500 transition-colors duration-200 ease-in-out">
+                    <path
+                      d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z" />
+                  </svg>
+                </button>
+                <input type="range" id="cardMinHeightRange" name="cardMinHeight" min="50" max="1080" value="100"
+                  class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 dynamic-range"
+                  data-target="cardMinHeightRangeLabel" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Form actions -->
+          <div class="pt-2">
+            <button type="submit"
+              class="w-full py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-500 transition">
+              Generate card
             </button>
           </div>
+        </form>
+
+        <div class="text-center text-sm text-gray-500">
+          Made with ❤️ by
+          <a href="https://github.com/akanshSirohi" target="_blank" rel="noreferrer"
+            class="text-indigo-600 hover:underline">
+            Akansh Sirohi
+          </a>
+        </div>
+      </section>
+
+      <!-- RIGHT: Preview + outputs -->
+      <aside class="bg-white dark:bg-gray-800 shadow-2xl rounded-2xl p-6 md:p-8 space-y-5 lg:sticky lg:top-20 h-fit">
+        <div class="flex items-center justify-between">
+          <h2 class="text-lg font-semibold">Preview</h2>
+          <a id="downloadBtn" href="#" download="github-card.svg" class="inline-flex items-center gap-2 text-sm rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1.5
+                    hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+            <span aria-hidden="true">⬇️</span> Download SVG
+          </a>
         </div>
 
-        <!-- HTML field -->
-        <div>
-          <label for="htmlOutput" class="block mb-2 text-sm font-medium">
-            HTML Tag
-          </label>
+        <div id="holder" class="relative flex justify-center items-center min-h-[120px] rounded-xl border border-dashed
+                                border-gray-300 dark:border-gray-700 p-4">
 
-          <div class="flex items-stretch">
-            <input id="htmlOutput" type="text" readonly class="flex-1 rounded-l-lg border border-gray-300 bg-gray-50 p-2.5 text-sm
-                          dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100" />
+          <!-- placeholder (shown initially) -->
+          <div id="placeholder" class="text-center text-sm text-gray-500 dark:text-gray-400">
+            <p class="opacity-80">
+              Select a card and click <span class="font-medium">Generate card</span> to preview.
+            </p>
+          </div>
 
-            <!-- copy button -->
-            <button type="button" class="copy-btn relative rounded-r-lg border border-l-0 border-gray-300
-                           bg-indigo-600 px-4 text-sm font-medium text-white hover:bg-indigo-500
-                           dark:border-gray-600" data-clipboard-target="#htmlOutput" data-tooltip="Copy">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="height: 20px;fill:#fff;">
-                <path
-                  d="M384 336l-192 0c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l140.1 0L400 115.9 400 320c0 8.8-7.2 16-16 16zM192 384l192 0c35.3 0 64-28.7 64-64l0-204.1c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1L192 0c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-32-48 0 0 32c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l32 0 0-48-32 0z" />
-              </svg>
-            </button>
+          <!-- loader (hidden until a request starts) -->
+          <div id="loader"
+            class="absolute hidden w-12 h-12 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin">
+          </div>
+
+          <!-- image -->
+          <img id="preview" class="max-w-full shadow-lg hidden rounded-md" alt="Card preview" />
+        </div>
+
+
+        <!-- Outputs -->
+        <div id="resultSection" class="hidden space-y-6">
+          <!-- Markdown -->
+          <div>
+            <label for="mdOutput" class="block mb-2 text-sm font-medium">Markdown</label>
+            <div class="flex items-stretch">
+              <input id="mdOutput" type="text" readonly class="flex-1 rounded-l-lg border border-gray-300 bg-gray-50 p-2.5 text-sm
+                       dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100" />
+              <button type="button" class="copy-btn relative rounded-r-lg border border-l-0 border-gray-300 bg-indigo-600 px-4 text-sm font-medium text-white
+                       hover:bg-indigo-500 dark:border-gray-600" data-clipboard-target="#mdOutput" data-tooltip="Copy">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="height: 20px;fill:#fff;">
+                  <path
+                    d="M384 336l-192 0c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l140.1 0L400 115.9 400 320c0 8.8-7.2 16-16 16zM192 384l192 0c35.3 0 64-28.7 64-64l0-204.1c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1L192 0c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-32-48 0 0 32c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l32 0 0-48-32 0z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- HTML -->
+          <div>
+            <label for="htmlOutput" class="block mb-2 text-sm font-medium">HTML Tag</label>
+            <div class="flex items-stretch">
+              <input id="htmlOutput" type="text" readonly class="flex-1 rounded-l-lg border border-gray-300 bg-gray-50 p-2.5 text-sm
+                       dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100" />
+              <button type="button" class="copy-btn relative rounded-r-lg border border-l-0 border-gray-300 bg-indigo-600 px-4 text-sm font-medium text-white
+                       hover:bg-indigo-500 dark:border-gray-600" data-clipboard-target="#htmlOutput"
+                data-tooltip="Copy">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="height: 20px;fill:#fff;">
+                  <path
+                    d="M384 336l-192 0c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l140.1 0L400 115.9 400 320c0 8.8-7.2 16-16 16zM192 384l192 0c35.3 0 64-28.7 64-64l0-204.1c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1L192 0c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-32-48 0 0 32c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l32 0 0-48-32 0z" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
-
-      </div>
-
-
+      </aside>
     </div>
-    <div class="flex items-center justify-center mt-2">
-      <span>Made with ❤️ by <a href="https://github.com/akanshSirohi" target="_blank" rel="noreferrer"
-          class="text-white hover:underline">Akansh Sirohi</a></span>
-    </div>
-  </div>
+  </main>
 
   <!-- libs -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr"></script>
   <script src="./libs/lc_color_picker.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
 
