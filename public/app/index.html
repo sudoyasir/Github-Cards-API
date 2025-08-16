@@ -92,21 +92,46 @@
               </div>
             </div>
 
-            <!-- Ranges + alignment -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <!-- Font Size -->
-              <div class="relative">
-                <label for="fontSizeRange" class="block mb-2 text-sm font-medium">
-                  Font Size <span id="fontSizeRangeLabel" class="ml-2 text-xs text-gray-500 dark:text-gray-400">(16px)</span>
-                </label>
-                <button type="button" class="absolute right-0 -top-[2px] text-gray-400 hover:text-red-500 transition p-1 w-fit reset-btn" data-target="fontSizeRange" data-val="16" aria-label="Reset font size">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 fill-white hover:fill-red-500 transition-colors duration-200 ease-in-out"><path d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z"/></svg>
-                </button>
-                <input type="range" id="fontSizeRange" name="fontSize" min="8" max="72" value="16" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 dynamic-range" data-target="fontSizeRangeLabel" />
+            <!-- Controls: Two-column layout: Left = font/inner/outer, Right = alignment -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+              <!-- LEFT COLUMN -->
+              <div class="space-y-6">
+                <!-- Font Size -->
+                <div class="relative">
+                  <label for="fontSizeRange" class="block mb-2 text-sm font-medium">
+                    Font Size <span id="fontSizeRangeLabel" class="ml-2 text-xs text-gray-500 dark:text-gray-400">(16px)</span>
+                  </label>
+                  <button type="button" class="absolute right-0 -top-[2px] text-gray-400 hover:text-red-500 transition p-1 w-fit reset-btn" data-target="fontSizeRange" data-val="16" aria-label="Reset font size">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 fill-white hover:fill-red-500 transition-colors duration-200 ease-in-out"><path d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z"/></svg>
+                  </button>
+                  <input type="range" id="fontSizeRange" name="fontSize" min="8" max="72" value="16" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 dynamic-range" data-target="fontSizeRangeLabel" />
+                </div>
+
+                <!-- Inner padding -->
+                <div class="relative">
+                  <label for="innerPadRange" class="block mb-2 text-sm font-medium">
+                    Inner Card Padding <span id="innerPadRangeLabel" class="ml-2 text-xs text-gray-500 dark:text-gray-400">(15px)</span>
+                  </label>
+                  <button type="button" class="absolute right-0 -top-[2px] text-gray-400 hover:text-red-500 transition p-1 w-fit reset-btn" data-target="innerPadRange" data-val="15" aria-label="Reset inner padding">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 fill-white hover:fill-red-500 transition-colors duration-200 ease-in-out"><path d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z"/></svg>
+                  </button>
+                  <input type="range" id="innerPadRange" name="innerPad" min="0" max="50" value="15" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 dynamic-range" data-target="innerPadRangeLabel" />
+                </div>
+
+                <!-- Outer padding -->
+                <div class="relative">
+                  <label for="outerPadRange" class="block mb-2 text-sm font-medium">
+                    Outer Card Padding <span id="outerPadRangeLabel" class="ml-2 text-xs text-gray-500 dark:text-gray-400">(15px)</span>
+                  </label>
+                  <button type="button" class="absolute right-0 -top-[2px] text-gray-400 hover:text-red-500 transition p-1 w-fit reset-btn" data-target="outerPadRange" data-val="15" aria-label="Reset outer padding">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 fill-white hover:fill-red-500 transition-colors duration-200 ease-in-out"><path d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z"/></svg>
+                  </button>
+                  <input type="range" id="outerPadRange" name="outerPad" min="0" max="50" value="15" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 dynamic-range" data-target="outerPadRangeLabel" />
+                </div>
               </div>
 
-              <!-- Text Alignment (icon grid) spans two rows and fills column -->
-              <div class="md:row-span-2 md:self-stretch">
+              <!-- RIGHT COLUMN -->
+              <div class="md:self-stretch h-full">
                 <label class="block mb-2 text-sm font-medium">Text Alignment</label>
                 <input type="hidden" id="textAlignment" name="textAlignment" value="">
                 <div id="alignPicker" class="align-grid w-full h-full">
@@ -121,32 +146,9 @@
                   <button type="button" class="align-btn pos-br" data-value="br" role="radio" aria-checked="false" title="Bottom Right"><span class="sr-only">Bottom Right</span></button>
                 </div>
               </div>
-
-              <!-- Inner padding moved up to fill the left side -->
-              <div class="relative">
-                <label for="innerPadRange" class="block mb-2 text-sm font-medium">
-                  Inner Card Padding <span id="innerPadRangeLabel" class="ml-2 text-xs text-gray-500 dark:text-gray-400">(15px)</span>
-                </label>
-                <button type="button" class="absolute right-0 -top-[2px] text-gray-400 hover:text-red-500 transition p-1 w-fit reset-btn" data-target="innerPadRange" data-val="15" aria-label="Reset inner padding">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 fill-white hover:fill-red-500 transition-colors duration-200 ease-in-out"><path d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z"/></svg>
-                </button>
-                <input type="range" id="innerPadRange" name="innerPad" min="0" max="50" value="15" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 dynamic-range" data-target="innerPadRangeLabel" />
-              </div>
             </div>
 
-            <!-- Spacing & size -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="relative">
-                <label for="outerPadRange" class="block mb-2 text-sm font-medium">
-                  Outer Card Padding <span id="outerPadRangeLabel" class="ml-2 text-xs text-gray-500 dark:text-gray-400">(15px)</span>
-                </label>
-                <button type="button" class="absolute right-0 -top-[2px] text-gray-400 hover:text-red-500 transition p-1 w-fit reset-btn" data-target="outerPadRange" data-val="15" aria-label="Reset outer padding">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 fill-white hover:fill-red-500 transition-colors duration-200 ease-in-out"><path d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z"/></svg>
-                </button>
-                <input type="range" id="outerPadRange" name="outerPad" min="0" max="50" value="15" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 dynamic-range" data-target="outerPadRangeLabel" />
-              </div>
-            </div>
-
+            <!-- Size controls (UNCHANGED): Card Width & Card Min Height -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div class="relative">
                 <label for="cardWidthRange" class="block mb-2 text-sm font-medium">
