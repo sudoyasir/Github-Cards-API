@@ -238,3 +238,40 @@ clipboard.on("error", (e) => {
     delete btn.dataset.show;
   }, 1200);
 });
+
+// --- Icon-only text alignment picker ---
+(function initAlignPicker(){
+  const picker = document.getElementById('alignPicker');
+  const hidden = document.getElementById('textAlignment');
+  if (!picker || !hidden) return;
+
+  const buttons = Array.from(picker.querySelectorAll('.align-btn'));
+
+  const select = (val) => {
+    buttons.forEach(b => b.setAttribute('aria-checked', (b.dataset.value === val) ? 'true' : 'false'));
+    hidden.value = val;
+  };
+
+  // click support
+  buttons.forEach(btn => btn.addEventListener('click', () => select(btn.dataset.value)));
+
+  // keyboard nav (arrows/wasd/enter/space)
+  picker.addEventListener('keydown', (e) => {
+    const keys = ['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','w','a','s','d','W','A','S','D'];
+    if (!keys.includes(e.key)) return;
+    e.preventDefault();
+    const order = ['tl','tm','tr','ml','mm','mr','bl','bm','br'];
+    const current = hidden.value || 'mm';
+    const idx = order.indexOf(current);
+    const col = idx % 3, row = Math.floor(idx / 3);
+    let [r,c] = [row,col];
+    if (e.key==='ArrowUp' || e.key==='w' || e.key==='W')   r = Math.max(0, r-1);
+    if (e.key==='ArrowDown'|| e.key==='s' || e.key==='S')  r = Math.min(2, r+1);
+    if (e.key==='ArrowLeft'|| e.key==='a' || e.key==='A')  c = Math.max(0, c-1);
+    if (e.key==='ArrowRight'|| e.key==='d'|| e.key==='D')  c = Math.min(2, c+1);
+    select(order[r*3 + c]);
+  });
+
+  // optional: default to center
+  select(hidden.value || 'mm');
+})();
