@@ -57,26 +57,36 @@ $(".dynamic-range").on("input", function () {
 });
 
 /* ---------- lc_color_picker instances (library kept intact) ---------- */
-new lc_color_picker("#fontColorHex", {
-  modes: ["solid"],
-  dark_theme: true,
-  preview_style: { separator_color: "#374151", width: 40 },
-});
-new lc_color_picker("#shadowColorHex", {
-  modes: ["solid"],
-  dark_theme: true,
-  preview_style: { separator_color: "#374151", width: 40 },
-});
-new lc_color_picker("#bgColorHex", {
-  modes: ["solid", "linear-gradient", "radial-gradient"],
-  dark_theme: true,
-  preview_style: { separator_color: "#374151", width: 40 },
-});
-new lc_color_picker("#cardColorHex", {
-  modes: ["solid", "linear-gradient", "radial-gradient"],
-  dark_theme: true,
-  preview_style: { separator_color: "#374151", width: 40 },
-});
+const savedTheme = localStorage.getItem("gcg-theme");
+if (savedTheme === "light") document.documentElement.classList.remove("dark");
+if (savedTheme === "dark")  document.documentElement.classList.add("dark");
+
+function initPickers() {
+  const isDark = document.documentElement.classList.contains("dark");
+  
+  new lc_color_picker("#fontColorHex", {
+    modes: ["solid"],
+    dark_theme: isDark,
+    preview_style: { separator_color: isDark ? "#374151" : "#e5e7eb", width: 40 },
+  });
+  new lc_color_picker("#shadowColorHex", {
+    modes: ["solid"],
+    dark_theme: isDark,
+    preview_style: { separator_color: isDark ? "#374151" : "#e5e7eb", width: 40 },
+  });
+  new lc_color_picker("#bgColorHex", {
+    modes: ["solid","linear-gradient","radial-gradient"],
+    dark_theme: isDark,
+    preview_style: { separator_color: isDark ? "#374151" : "#e5e7eb", width: 40 },
+  });
+  new lc_color_picker("#cardColorHex", {
+    modes: ["solid","linear-gradient","radial-gradient"],
+    dark_theme: isDark,
+    preview_style: { separator_color: isDark ? "#374151" : "#e5e7eb", width: 40 },
+  });
+}
+
+initPickers();
 
 function cardTitleMaker(slug) {
   let title = slug.replaceAll("-", " ");
@@ -97,6 +107,13 @@ function cardTitleMaker(slug) {
     root.classList.toggle("dark");
     localStorage.setItem("gcg-theme", root.classList.contains("dark") ? "dark" : "light");
     setIcon();
+
+    ['#fontColorHex','#shadowColorHex','#bgColorHex','#cardColorHex'].forEach(sel => {
+      const el = document.querySelector(sel);
+      const clone = el.cloneNode(true);    // drop old listeners
+      el.replaceWith(clone);
+    });
+    initPickers(); // calls the four new lc_color_picker(...) with fresh isDark
   });
 })();
 

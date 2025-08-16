@@ -16,6 +16,14 @@ input.color_picker {
   border-color: rgb(75, 85, 99);
 }
 
+/* Light mode look for the color inputs */
+html:not(.dark) input.color_picker {
+  color: #111827;
+  background-color: #f8fafc;
+  border-color: #e5e7eb;
+}
+
+
 .lccp-preview-right { border-radius: 5px; width: 100%; }
 .lccp-preview-right span { border-radius: 0 5px 5px 0; }
 .lccp-preview-right input { border-radius: 5px; }
@@ -84,14 +92,14 @@ input.color_picker {
   position:relative;
   width:48px; height:48px;
   border-radius:12px;
-  border:1px solid #4b5563;            /* gray-600 */
-  background:#374151;                   /* gray-700 */
+  border:1px solid #4b5563;
+  background:#374151;      
   transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
   outline: none;
 }
 html:not(.dark) .align-btn{
-  border-color:#e5e7eb;                 /* gray-200 */
-  background:#f8fafc;                   /* slate-50 */
+  border-color:#e5e7eb;
+  background:#f8fafc;  
 }
 
 /* inner box/grid hint */
@@ -110,16 +118,16 @@ html:not(.dark) .align-btn::before{
   content:"";
   position:absolute;
   width:10px; height:10px; border-radius:9999px;
-  background:#e5e7eb;                   /* gray-200 */
+  background:#e5e7eb;        
   box-shadow: 0 0 0 2px rgba(0,0,0,.25);
 }
 html:not(.dark) .align-btn::after{
-  background:#111827;                   /* gray-900 */
+  background:#111827;        
   box-shadow: 0 0 0 2px rgba(0,0,0,.06);
 }
 
 /* states */
-.align-btn:hover{ border-color:#6366f1; }               /* indigo-500 */
+.align-btn:hover{ border-color:#6366f1; }  
 .align-btn[aria-checked="true"]{
   border-color:#6366f1;
   box-shadow:0 0 0 3px rgba(99,102,241,.25);
