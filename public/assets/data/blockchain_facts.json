@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "quote": "Blockchain is a decentralized, distributed, and often public, digital ledger that is used to record transactions across many computers so that any involved block cannot be altered retroactively without the alteration of all subsequent blocks.",
+    "lang": "en"
+  },
+  {
+    "id": 2,
+    "quote": "The concept of a cryptographically secured chain of blocks dates back to 1991, described by Stuart Haber and W. Scott Stornetta.",
+    "lang": "en"
+  },
+  {
+    "id": 3,
+    "quote": "Satoshi Nakamoto created the first widely known application of blockchain, the cryptocurrency Bitcoin, in 2008.",
+    "lang": "en"
+  },
+  {
+    "id": 4,
+    "quote": "A 'block' on the blockchain holds a batch of valid transactions, a timestamp, and a cryptographic hash of the previous block.",
+    "lang": "en"
+  },
+  {
+    "id": 5,
+    "quote": "The 'chain' refers to the sequential link between blocks, secured by the cryptographic hash.",
+    "lang": "en"
+  },
+  {
+    "id": 6,
+    "quote": "Blockchain is synonymous with Distributed Ledger Technology (DLT).",
+    "lang": "en"
+  },
+  {
+    "id": 7,
+    "quote": "The three main types of blockchain networks are Public, Private, and Consortium (or Hybrid).",
+    "lang": "en"
+  },
+  {
+    "id": 8,
+    "quote": "Public blockchains (like Bitcoin) are open-source, permissionless, and transparent.",
+    "lang": "en"
+  },
+  {
+    "id": 9,
+    "quote": "Private blockchains are permissioned and controlled by a single organization.",
+    "lang": "en"
+  },
+  {
+    "id": 10,
+    "quote": "Consortium blockchains are controlled by a group of organizations, offering a balance of decentralization and control.",
+    "lang": "en"
+  },
+  {
+    "id": 11,
+    "quote": "Immutability is a key feature, meaning data recorded on the blockchain cannot be easily changed or deleted.",
+    "lang": "en"
+  },
+  {
+    "id": 12,
+    "quote": "Decentralization eliminates the need for a central authority, such as a bank or government, to validate transactions.",
+    "lang": "en"
+  },
+  {
+    "id": 13,
+    "quote": "Consensus mechanisms (like Proof-of-Work or Proof-of-Stake) are used to validate new blocks before they are added to the chain.",
+    "lang": "en"
+  },
+  {
+    "id": 14,
+    "quote": "Proof-of-Work (PoW) is the mechanism used by Bitcoin, requiring computational effort to solve complex math problems.",
+    "lang": "en"
+  },
+  {
+    "id": 15,
+    "quote": "Proof-of-Stake (PoS) is a more energy-efficient alternative where validators are chosen based on the amount of cryptocurrency they 'stake'.",
+    "lang": "en"
+  },
+  {
+    "id": 16,
+    "quote": "Ethereum, another major blockchain, transitioned from Proof-of-Work to Proof-of-Stake in 2022 (The Merge).",
+    "lang": "en"
+  },
+  {
+    "id": 17,
+    "quote": "The first block in a blockchain is called the 'Genesis Block' (Block 0).",
+    "lang": "en"
+  },
+  {
+    "id": 18,
+    "quote": "Blockchain is used for more than just cryptocurrencies, including supply chain management, voting, healthcare, and real estate.",
+    "lang": "en"
+  },
+  {
+    "id": 19,
+    "quote": "Smart contracts are self-executing contracts with the terms of the agreement directly written into code, running on a blockchain.",
+    "lang": "en"
+  },
+  {
+    "id": 20,
+    "quote": "The financial sector holds a significant portion of the total market share of blockchain technology.",
+    "lang": "en"
+  },
+  {
+    "id": 21,
+    "quote": "Blockchain's transparency allows every network participant to view the shared ledger.",
+    "lang": "en"
+  },
+  {
+    "id": 22,
+    "quote": "It is estimated that blockchain can reduce banks' infrastructure costs by up to 30%.",
+    "lang": "en"
+  },
+  {
+    "id": 23,
+    "quote": "The business value of blockchain is expected to grow to $3.1 trillion by 2030.",
+    "lang": "en"
+  },
+  {
+    "id": 24,
+    "quote": "Non-Fungible Tokens (NFTs) are digital assets that use blockchain to prove unique ownership and authenticity.",
+    "lang": "en"
+  },
+  {
+    "id": 25,
+    "quote": "Blockchain can enhance data security for healthcare records due to its tamper-proof nature.",
+    "lang": "en"
+  },
+  {
+    "id": 26,
+    "quote": "A 51% attack is a theoretical scenario where one entity gains control of more than half of a blockchain's mining power or staking pool, potentially allowing them to manipulate the ledger.",
+    "lang": "en"
+  },
+  {
+    "id": 27,
+    "quote": "The United States is one of the largest spenders on blockchain technology globally.",
+    "lang": "en"
+  },
+  {
+    "id": 28,
+    "quote": "Blockchain technology is being integrated into the Metaverse for asset ownership and identity.",
+    "lang": "en"
+  },
+  {
+    "id": 29,
+    "quote": "Some countries are exploring Central Bank Digital Currencies (CBDCs) based on blockchain or DLT.",
+    "lang": "en"
+  },
+  {
+    "id": 30,
+    "quote": "Blockchain transactions are recorded using cryptographic keys—a public key (address) and a private key (password).",
+    "lang": "en"
+  },
+  {
+    "id": 31,
+    "quote": "The speed of transactions (throughput) is a common challenge for public blockchains like Bitcoin.",
+    "lang": "en"
+  },
+  {
+    "id": 32,
+    "quote": "Blockchain has the potential to streamline voting systems by making them secure and transparent.",
+    "lang": "en"
+  },
+  {
+    "id": 33,
+    "quote": "Many governments have plans to invest in blockchain technology for various operations.",
+    "lang": "en"
+  },
+  {
+    "id": 34,
+    "quote": "A blockchain is continuously growing as 'completed' blocks are added to it with a new set of recordings.",
+    "lang": "en"
+  },
+  {
+    "id": 35,
+    "quote": "Blockchain is considered a foundational technology, capable of building new foundations for society and economics.",
+    "lang": "en"
+  },
+  {
+    "id": 36,
+    "quote": "Nodes are the computers or devices that maintain a copy of the blockchain ledger and validate transactions.",
+    "lang": "en"
+  },
+  {
+    "id": 37,
+    "quote": "Hashing is the process that converts input data of any size into a fixed-size string of characters, creating a unique 'fingerprint' for each block.",
+    "lang": "en"
+  },
+  {
+    "id": 38,
+    "quote": "Changing even a single transaction in a block requires re-hashing that block and all subsequent blocks, which is computationally infeasible for a decentralized public chain.",
+    "lang": "en"
+  },
+  {
+    "id": 39,
+    "quote": "Cryptocurrencies provide an incentive (rewards) for miners or validators to secure the network.",
+    "lang": "en"
+  },
+  {
+    "id": 40,
+    "quote": "The technology promotes peer-to-peer transactions without the need for intermediaries.",
+    "lang": "en"
+  },
+  {
+    "id": 41,
+    "quote": "The first commercial transaction using Bitcoin was for two pizzas, purchased for 10,000 BTC in 2010.",
+    "lang": "en"
+  },
+  {
+    "id": 42,
+    "quote": "The global blockchain technology market is projected to reach hundreds of billions of dollars within the next decade.",
+    "lang": "en"
+  },
+  {
+    "id": 43,
+    "quote": "Blockchain is being explored to reduce fraud in digital advertising by providing transparent transaction records.",
+    "lang": "en"
+  },
+  {
+    "id": 44,
+    "quote": "The technology is revolutionizing content distribution by helping creators safeguard their rights.",
+    "lang": "en"
+  },
+  {
+    "id": 45,
+    "quote": "Blockchain could help with digital identification for the billions of people worldwide who lack formal ID.",
+    "lang": "en"
+  },
+  {
+    "id": 46,
+    "quote": "An advantage of blockchain is its high Byzantine fault tolerance, meaning it can still function even if some network nodes are compromised.",
+    "lang": "en"
+  },
+  {
+    "id": 47,
+    "quote": "The use of 'tokenization' allows the value of an asset to be converted into a digital token on a blockchain.",
+    "lang": "en"
+  },
+  {
+    "id": 48,
+    "quote": "Blockchain can expedite property trading by securely storing ownership records and eliminating protracted legal processes.",
+    "lang": "en"
+  },
+  {
+    "id": 49,
+    "quote": "Layer 2 scaling solutions are being developed to increase the transaction capacity and speed of main blockchains (Layer 1).",
+    "lang": "en"
+  },
+  {
+    "id": 50,
+    "quote": "As of a few years ago, more than 80 million blockchain wallets were registered globally for cryptocurrency use.",
+    "lang": "en"
+  },
+  {
+    "id": 51,
+    "quote": "ब्लॉकचेन एक विकेन्द्रीकृत, वितरित बही-खाता (डिजिटल लेजर) है जिसका उपयोग लेनदेन को सुरक्षित और अपरिवर्तनीय तरीके से रिकॉर्ड करने के लिए किया जाता है।",
+    "lang": "hi"
+  },
+  {
+    "id": 52,
+    "quote": "ब्लॉकचेन को 'डिस्ट्रीब्यूटेड लेजर टेक्नोलॉजी' (DLT) के नाम से भी जाना जाता है।",
+    "lang": "hi"
+  },
+  {
+    "id": 53,
+    "quote": "हर एक 'ब्लॉक' में कई लेनदेन, एक टाइमस्टैम्प और पिछले ब्लॉक का क्रिप्टोग्राफिक हैश (hash) होता है।",
+    "lang": "hi"
+  },
+  {
+    "id": 54,
+    "quote": "यह तकनीक किसी भी केंद्रीय प्राधिकरण (Central Authority) जैसे कि बैंक या सरकार की आवश्यकता को समाप्त करती है।",
+    "lang": "hi"
+  },
+  {
+    "id": 55,
+    "quote": "ब्लॉकचेन की नींव 1991 में रखी गई थी, लेकिन इसकी लोकप्रियता 2008 में बिटकॉइन के साथ बढ़ी।",
+    "lang": "hi"
+  },
+  {
+    "id": 56,
+    "quote": "क्रिप्टोकरेंसी (जैसे बिटकॉइन और एथेरियम) ब्लॉकचेन तकनीक पर आधारित हैं।",
+    "lang": "hi"
+  },
+  {
+    "id": 57,
+    "quote": "एक बार जब कोई ब्लॉक श्रृंखला में जुड़ जाता है, तो उसे बदलना या हटाना लगभग असंभव होता है - इसे अपरिवर्तनीयता (Immutability) कहते हैं।",
+    "lang": "hi"
+  },
+  {
+    "id": 58,
+    "quote": "ब्लॉकचेन नेटवर्क के तीन मुख्य प्रकार हैं: पब्लिक, प्राइवेट और कंसोर्टियम।",
+    "lang": "hi"
+  },
+  {
+    "id": 59,
+    "quote": "पब्लिक ब्लॉकचेन सभी के लिए खुली और पारदर्शी होती है।",
+    "lang": "hi"
+  },
+  {
+    "id": 60,
+    "quote": "प्राइवेट ब्लॉकचेन एक संगठन द्वारा नियंत्रित होती है और इसमें प्रवेश के लिए अनुमति (Permission) आवश्यक होती है।",
+    "lang": "hi"
+  },
+  {
+    "id": 61,
+    "quote": "कंसोर्टियम ब्लॉकचेन को संगठनों के एक समूह द्वारा नियंत्रित किया जाता है।",
+    "lang": "hi"
+  },
+  {
+    "id": 62,
+    "quote": "लेनदेन की वैधता सुनिश्चित करने के लिए 'सर्वसम्मति तंत्र' (Consensus Mechanism) का उपयोग किया जाता है।",
+    "lang": "hi"
+  },
+  {
+    "id": 63,
+    "quote": "प्रूफ-ऑफ-वर्क (PoW) और प्रूफ-ऑफ-स्टेक (PoS) दो प्रमुख सर्वसम्मति तंत्र हैं।",
+    "lang": "hi"
+  },
+  {
+    "id": 64,
+    "quote": "PoW में माइनर्स को ब्लॉक जोड़ने के लिए जटिल गणितीय समस्याओं को हल करना होता है।",
+    "lang": "hi"
+  },
+  {
+    "id": 65,
+    "quote": "PoS PoW की तुलना में अधिक ऊर्जा-कुशल (energy-efficient) होता है।",
+    "lang": "hi"
+  },
+  {
+    "id": 66,
+    "quote": "ब्लॉकचेन का पहला ब्लॉक 'जेनेसिस ब्लॉक' (उत्पत्ति ब्लॉक) कहलाता है।",
+    "lang": "hi"
+  },
+  {
+    "id": 67,
+    "quote": "ब्लॉकचेन का उपयोग क्रिप्टोकरेंसी के अलावा आपूर्ति श्रृंखला प्रबंधन (Supply Chain Management), स्वास्थ्य सेवा और मतदान प्रणालियों में भी होता है।",
+    "lang": "hi"
+  },
+  {
+    "id": 68,
+    "quote": "'स्मार्ट कॉन्ट्रैक्ट्स' कोड में लिखे गए स्व-निष्पादन (self-executing) अनुबंध होते हैं जो ब्लॉकचेन पर चलते हैं।",
+    "lang": "hi"
+  },
+  {
+    "id": 69,
+    "quote": "ब्लॉकचेन तकनीक में वित्तीय क्षेत्र की बाजार हिस्सेदारी सबसे अधिक है।",
+    "lang": "hi"
+  },
+  {
+    "id": 70,
+    "quote": "ब्लॉकचेन में दर्ज जानकारी सभी नेटवर्क प्रतिभागियों के लिए खुली होती है, जिससे पारदर्शिता बनी रहती है।",
+    "lang": "hi"
+  },
+  {
+    "id": 71,
+    "quote": "अनुमान है कि ब्लॉकचेन बैंकों की बुनियादी ढांचा लागत (infrastructure costs) को 30% तक कम कर सकता है।",
+    "lang": "hi"
+  },
+  {
+    "id": 72,
+    "quote": "ब्लॉकचेन का व्यापार मूल्य (business value) 2030 तक $3.1 ट्रिलियन तक बढ़ने की उम्मीद है।",
+    "lang": "hi"
+  },
+  {
+    "id": 73,
+    "quote": "नॉन-फंगिबल टोकन (NFTs) अद्वितीय डिजिटल संपत्ति हैं जो स्वामित्व साबित करने के लिए ब्लॉकचेन का उपयोग करते हैं।",
+    "lang": "hi"
+  },
+  {
+    "id": 74,
+    "quote": "ब्लॉकचेन अपनी छेड़छाड़-रोधी (tamper-proof) प्रकृति के कारण स्वास्थ्य रिकॉर्ड की सुरक्षा को बढ़ा सकता है।",
+    "lang": "hi"
+  },
+  {
+    "id": 75,
+    "quote": "'51% अटैक' वह सैद्धांतिक स्थिति है जहां कोई इकाई अधिकांश माइनिंग शक्ति को नियंत्रित करके बही-खाते में हेरफेर कर सकती है।",
+    "lang": "hi"
+  },
+  {
+    "id": 76,
+    "quote": "भारत में आंध्र प्रदेश भूमि पंजीकरण के लिए ब्लॉकचेन इंजीनियरिंग का उपयोग करने वाला पहला राज्य है।",
+    "lang": "hi"
+  },
+  {
+    "id": 77,
+    "quote": "ब्लॉकचेन टेक्नोलॉजी मेटावर्स (Metaverse) में संपत्ति के स्वामित्व और पहचान के लिए महत्वपूर्ण भूमिका निभा रही है।",
+    "lang": "hi"
+  },
+  {
+    "id": 78,
+    "quote": "ब्लॉकचेन या DLT पर आधारित केंद्रीय बैंक डिजिटल मुद्राएं (CBDCs) विकसित करने पर विचार किया जा रहा है।",
+    "lang": "hi"
+  },
+  {
+    "id": 79,
+    "quote": "ब्लॉकचेन लेनदेन को क्रिप्टोग्राफिक कुंजी (सार्वजनिक और निजी कुंजी) का उपयोग करके रिकॉर्ड किया जाता है।",
+    "lang": "hi"
+  },
+  {
+    "id": 80,
+    "quote": "ब्लॉकचेन में लेनदेन की गति (throughput) कुछ नेटवर्कों के लिए एक चुनौती है।",
+    "lang": "hi"
+  },
+  {
+    "id": 81,
+    "quote": "ब्लॉकचेन सुरक्षित और पारदर्शी मतदान प्रणालियों के विकास में मदद कर सकता है।",
+    "lang": "hi"
+  },
+  {
+    "id": 82,
+    "quote": "कई सरकारें विभिन्न कार्यों के लिए ब्लॉकचेन तकनीक में निवेश करने की योजना बना रही हैं।",
+    "lang": "hi"
+  },
+  {
+    "id": 83,
+    "quote": "ब्लॉकचेन लगातार बढ़ता रहता है क्योंकि इसमें 'पूरे' हुए ब्लॉक जोड़े जाते हैं।",
+    "lang": "hi"
+  },
+  {
+    "id": 84,
+    "quote": "ब्लॉकचेन एक 'बुनियादी तकनीक' (foundational technology) मानी जाती है जो समाज और अर्थव्यवस्था के लिए नए आधार बना सकती है।",
+    "lang": "hi"
+  },
+  {
+    "id": 85,
+    "quote": "नोड्स (Nodes) वे कंप्यूटर या डिवाइस हैं जो ब्लॉकचेन लेजर की एक प्रति रखते हैं और लेनदेन को मान्य करते हैं।",
+    "lang": "hi"
+  },
+  {
+    "id": 86,
+    "quote": "हैशिंग (Hashing) वह प्रक्रिया है जो किसी भी आकार के इनपुट डेटा को एक निश्चित आकार के वर्णों की स्ट्रिंग में परिवर्तित करती है, जिससे प्रत्येक ब्लॉक का एक अद्वितीय 'फिंगरप्रिंट' बनता है।",
+    "lang": "hi"
+  },
+  {
+    "id": 87,
+    "quote": "ब्लॉक में एक भी लेनदेन बदलने के लिए उस ब्लॉक और उसके बाद के सभी ब्लॉकों को फिर से हैश (re-hash) करना होगा, जो व्यावहारिक रूप से असंभव है।",
+    "lang": "hi"
+  },
+  {
+    "id": 88,
+    "quote": "क्रिप्टोकरेंसी माइनर्स या वैलिडेटर्स को नेटवर्क को सुरक्षित करने के लिए प्रोत्साहन (इनाम) प्रदान करती है।",
+    "lang": "hi"
+  },
+  {
+    "id": 89,
+    "quote": "यह तकनीक बिचौलियों (Intermediaries) की आवश्यकता के बिना पीयर-टू-पीयर लेनदेन को बढ़ावा देती है।",
+    "lang": "hi"
+  },
+  {
+    "id": 90,
+    "quote": "बिटकॉइन का उपयोग करके पहला व्यावसायिक लेनदेन 2010 में दो पिज्जा खरीदने के लिए किया गया था।",
+    "lang": "hi"
+  },
+  {
+    "id": 91,
+    "quote": "वैश्विक ब्लॉकचेन तकनीक बाजार का अगले दशक में अरबों डॉलर तक पहुंचने का अनुमान है।",
+    "lang": "hi"
+  },
+  {
+    "id": 92,
+    "quote": "ब्लॉकचेन पारदर्शी रिकॉर्ड प्रदान करके डिजिटल विज्ञापन में धोखाधड़ी (fraud) को कम करने में मदद कर सकता है।",
+    "lang": "hi"
+  },
+  {
+    "id": 93,
+    "quote": "यह तकनीक रचनाकारों को उनके अधिकारों की सुरक्षा में मदद करके सामग्री वितरण (content distribution) में क्रांति ला रही है।",
+    "lang": "hi"
+  },
+  {
+    "id": 94,
+    "quote": "ब्लॉकचेन दुनिया भर के अरबों लोगों के लिए डिजिटल पहचान प्रदान करने में मदद कर सकता है जिनके पास औपचारिक आईडी नहीं है।",
+    "lang": "hi"
+  },
+  {
+    "id": 95,
+    "quote": "ब्लॉकचेन का एक फायदा इसकी उच्च 'बीजान्टिन दोष सहिष्णुता' (Byzantine fault tolerance) है, जिसका अर्थ है कि कुछ नोड्स के खराब होने पर भी यह काम कर सकता है।",
+    "lang": "hi"
+  },
+  {
+    "id": 96,
+    "quote": "'टोकनाइजेशन' (Tokenization) का उपयोग किसी संपत्ति के मूल्य को ब्लॉकचेन पर एक डिजिटल टोकन में बदलने के लिए किया जाता है।",
+    "lang": "hi"
+  },
+  {
+    "id": 97,
+    "quote": "ब्लॉकचेन सुरक्षित रूप से स्वामित्व रिकॉर्ड संग्रहीत करके संपत्ति व्यापार को तेज कर सकता है।",
+    "lang": "hi"
+  },
+  {
+    "id": 98,
+    "quote": "लेयर 2 स्केलिंग समाधान मुख्य ब्लॉकचेन (लेयर 1) की लेनदेन क्षमता और गति को बढ़ाने के लिए विकसित किए जा रहे हैं।",
+    "lang": "hi"
+  },
+  {
+    "id": 99,
+    "quote": "ब्लॉकचेन में संग्रहीत डेटा को एन्क्रिप्ट किया जाता है, जिसका अर्थ है कि केवल असाइन किए गए व्यक्ति ही अपनी पहचान बता सकते हैं।",
+    "lang": "hi"
+  },
+  {
+    "id": 100,
+    "quote": "भारतीय प्रधानमंत्री ने भी ब्लॉकचेन को एक अच्छी तकनीक बताते हुए इसके महत्व को स्वीकार किया है।",
+    "lang": "hi"
+  }
+]

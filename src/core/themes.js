@@ -50,6 +50,62 @@ export const HTML_THEMES = {
             </div>
         </div>
     `,
+    'ANIME': `
+  <div style="
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      background: linear-gradient(135deg, #f9e7fe, #e0c3fc); 
+      border: 2px solid #a855f7; 
+      padding: 25px; 
+      width: 420px; 
+      text-align: center; 
+      border-radius: 18px; 
+      box-shadow: 0px 8px 18px rgba(168, 85, 247, 0.3);
+      font-family: 'Comic Sans MS', 'Poppins', sans-serif;
+  ">
+      <!-- Title (anime glow effect) -->
+      <h2 style="
+          font-size: 18px; 
+          font-weight: bold; 
+          color: #9333ea; 
+          text-shadow: 0px 0px 6px rgba(147, 51, 234, 0.8),
+                       0px 0px 12px rgba(236, 72, 153, 0.6);
+          margin-bottom: 12px;
+      ">
+          ✨ Anime Vibes ✨
+      </h2>
+
+      <!-- Content -->
+      <div style="
+          display: flex; 
+          justify-content: center; 
+          align-items: center; 
+          padding: 15px 10px; 
+          background: rgba(255,255,255,0.6); 
+          border-radius: 12px; 
+          border: 1px dashed #9333ea; 
+          white-space: pre-line;
+      ">
+          <span style="
+              font-size: 12px; 
+              font-weight: 500; 
+              color: #1f2937;
+          ">{{card_content}}</span>
+      </div>
+
+      <!-- Decorative border (like anime aura lines) -->
+      <div style="
+          display: flex; 
+          width: 100%; 
+          height: 2px; 
+          background: linear-gradient(90deg, #f472b6, #a78bfa, #60a5fa); 
+          margin-top: 15px;
+      "></div>
+  </div>
+`
+,
     // PATTERN THEME
     'RETRO_BLOCK': `
         <div style="position:relative;display:flex;width:400px;">
