@@ -353,17 +353,22 @@ Add screenshots of your new theme/card
 - [ ] Tests added/updated
 ```
 
-## 🔧 Project Structure
+### 🔧 Project Structure
 
 ```
 Github-Cards-API/
 ├── public/                     # Static assets
 │   ├── app/                   # Interactive web UI
+│   │   ├── index.html         # Main UI with footer stats
+│   │   ├── script.js          # UI logic + repo stats fetching
+│   │   └── style.css          # Styling including footer
 │   └── assets/                # Fonts, data files
 │       ├── data/              # JSON data for cards
 │       └── fonts/             # Font files
 ├── src/                       # Source code
 │   ├── cards/                 # Card handlers
+│   │   ├── repo-stats.js      # Repository statistics API
+│   │   └── ...                # Other card handlers
 │   ├── core/                  # Core functionality
 │   │   ├── card-generator.js  # Main card generation logic
 │   │   ├── themes.js          # Theme definitions
@@ -377,6 +382,18 @@ Github-Cards-API/
 ├── package.json              # Dependencies and scripts
 └── vitest.config.js          # Test configuration
 ```
+
+### Key Technologies
+
+- **Cloudflare Workers**: Serverless runtime
+- **Satori**: HTML to SVG conversion
+- **Vitest**: Testing framework
+- **Wrangler**: Cloudflare development tool
+
+### 🌟 Recent Features
+
+- **Repository Footer**: The web interface now includes a footer displaying real-time GitHub repository statistics (stars, forks, contributors, last updated)
+- **API Endpoint**: `/api/repo-stats` provides repository statistics in JSON format with caching
 
 ### Key Technologies
 
