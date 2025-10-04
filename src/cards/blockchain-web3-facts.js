@@ -12,12 +12,12 @@ export default async function blockchainFactsHandler({ req, env }) {
 
   // Default language (mostly English for now)
   let language = Languages.ENGLISH;
-  let cardContent = `🔗 Blockchain Fact of the Day:\n\n"${randomFact.quote}"`;
+  let cardContent = `Blockchain Fact of the Day:\n\n"${randomFact.quote}"`;
 
   // If fact has language metadata, adjust accordingly
   if (randomFact.lang && randomFact.lang.toLowerCase() === 'hi') {
     language = Languages.HINDI;
-    cardContent = `🔗 आज का ब्लॉकचेन तथ्य:\n\n"${randomFact.quote}"`;
+    cardContent = `आज का ब्लॉकचेन तथ्य:\n\n"${randomFact.quote}"`;
   }
   // Extract theme and params from URL
   const url = new URL(req.url);

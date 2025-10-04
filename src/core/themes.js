@@ -50,55 +50,110 @@ export const HTML_THEMES = {
             </div>
         </div>
     `,
+
  'ANIME': `
 <div style="
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
     align-items: center; 
-    background: linear-gradient(135deg, #f9e7fe, #e0c3fc); 
-    border: 2px solid #a855f7; 
-    padding: 25px; 
+    background: linear-gradient(145deg, #0f0f23 0%, #1a0b2e 50%, #2d1b4e 100%);
+    border: 4px solid #8b5cf6;
+    padding: 30px; 
     width: 420px; 
     text-align: center; 
-    border-radius: 18px; 
-    box-shadow: 0px 8px 18px rgba(168, 85, 247, 0.3);
-    font-family: 'Comic Sans MS', 'Poppins', sans-serif;
+    border-radius: 20px; 
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.5);
+    font-family: Arial, sans-serif;
 ">
-    <!-- Title (anime glow effect) -->
-    <h2 style="
-        font-size: 18px; 
-        font-weight: bold; 
-        color: #9333ea; 
-        margin: 0 0 8px 0;
-        letter-spacing: 1px;
-    ">Anime Vibes</h2>
+    <!-- Top accent line -->
+    <div style="
+        display: flex;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, #ec4899, #8b5cf6, #06b6d4);
+        margin-bottom: 20px;
+        border-radius: 2px;
+    "></div>
 
-    <!-- Content -->
+    <!-- Title -->
+    <div style="
+        display: flex;
+        font-size: 28px; 
+        font-weight: 900; 
+        color: #ffffff; 
+        margin: 0 0 20px 0;
+        letter-spacing: 4px;
+        background: linear-gradient(135deg, #ec4899, #8b5cf6, #06b6d4);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    ">ANIME VIBES</div>
+
+    <!-- Content container -->
     <div style="
         display: flex; 
         justify-content: center; 
         align-items: center; 
-        padding: 15px 10px; 
-        background: rgba(255,255,255,0.6); 
-        border-radius: 12px; 
-        border: 1px dashed #9333ea; 
+        padding: 24px 20px; 
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2));
+        border-radius: 16px; 
+        border: 2px solid rgba(139, 92, 246, 0.6);
         white-space: pre-line;
+        min-height: 80px;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 14px; 
+        font-weight: 600; 
+        color: #f5f5f5;
+        line-height: 1.6;
+    ">{{card_content}}</div>
+
+    <!-- Energy bars -->
+    <div style="
+        display: flex;
+        gap: 4px;
+        width: 100%; 
+        margin-top: 20px;
     ">
-        <span style="
-            font-size: 12px; 
-            font-weight: 500; 
-            color: #1f2937;
-        ">{{card_content}}</span>
+        <div style="
+            display: flex;
+            flex: 1; 
+            height: 5px; 
+            background: linear-gradient(90deg, #ec4899, #f97316); 
+            border-radius: 3px;
+        "></div>
+        <div style="
+            display: flex;
+            flex: 1; 
+            height: 5px; 
+            background: linear-gradient(90deg, #f97316, #8b5cf6); 
+            border-radius: 3px;
+        "></div>
+        <div style="
+            display: flex;
+            flex: 1; 
+            height: 5px; 
+            background: linear-gradient(90deg, #8b5cf6, #06b6d4); 
+            border-radius: 3px;
+        "></div>
+        <div style="
+            display: flex;
+            flex: 1; 
+            height: 5px; 
+            background: linear-gradient(90deg, #06b6d4, #10b981); 
+            border-radius: 3px;
+        "></div>
     </div>
 
-    <!-- Decorative border (like anime aura lines) -->
+    <!-- Bottom accent line -->
     <div style="
-        display: flex; 
-        width: 100%; 
-        height: 2px; 
-        background: linear-gradient(90deg, #f472b6, #a78bfa, #60a5fa); 
-        margin-top: 15px;
+        display: flex;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, #10b981, #06b6d4, #ec4899);
+        margin-top: 20px;
+        border-radius: 2px;
     "></div>
 </div>
 `
