@@ -66,7 +66,6 @@ export const HTML_THEMES = {
     box-shadow: 0 8px 32px rgba(139, 92, 246, 0.5);
     font-family: Arial, sans-serif;
 ">
-    <!-- Top accent line -->
     <div style="
         display: flex;
         width: 100%;
@@ -75,22 +74,6 @@ export const HTML_THEMES = {
         margin-bottom: 20px;
         border-radius: 2px;
     "></div>
-
-    <!-- Title -->
-    <div style="
-        display: flex;
-        font-size: 28px; 
-        font-weight: 900; 
-        color: #ffffff; 
-        margin: 0 0 20px 0;
-        letter-spacing: 4px;
-        background: linear-gradient(135deg, #ec4899, #8b5cf6, #06b6d4);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    ">ANIME VIBES</div>
-
-    <!-- Content container -->
     <div style="
         display: flex; 
         justify-content: center; 
@@ -108,8 +91,6 @@ export const HTML_THEMES = {
         color: #f5f5f5;
         line-height: 1.6;
     ">{{card_content}}</div>
-
-    <!-- Energy bars -->
     <div style="
         display: flex;
         gap: 4px;
@@ -146,7 +127,6 @@ export const HTML_THEMES = {
         "></div>
     </div>
 
-    <!-- Bottom accent line -->
     <div style="
         display: flex;
         width: 100%;
