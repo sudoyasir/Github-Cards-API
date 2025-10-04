@@ -12,6 +12,7 @@ export default async function helpHandler({ req, env }) {
         `${baseurl}/random-facts-card?theme=techy`,
         `${baseurl}/space-facts-card?theme=techy`,
         `${baseurl}/harry-potter-spell-card?theme=techy`,
+        `${baseurl}/blockchain-web3-facts-card?theme=techy`,
       ],
     },
     neon_horizon: {
@@ -25,8 +26,23 @@ export default async function helpHandler({ req, env }) {
         `${baseurl}/random-facts-card?theme=neon_horizon`,
         `${baseurl}/space-facts-card?theme=neon_horizon`,
         `${baseurl}/harry-potter-spell-card?theme=neon_horizon`,
+        `${baseurl}/blockchain-web3-facts-card?theme=horizon`,
       ],
     },
+    anime: {
+  info: "Anime Theme",
+  example: [
+    `${baseurl}/jokes-card?theme=anime`,
+    `${baseurl}/programming-quotes-card?theme=anime`,
+    `${baseurl}/programming-facts-card?theme=anime`,
+    `${baseurl}/motivational-quotes-card?theme=anime`,
+    `${baseurl}/travel-destinations-card?theme=anime`,
+    `${baseurl}/random-facts-card?theme=anime`,
+    `${baseurl}/space-facts-card?theme=anime`,
+    `${baseurl}/harry-potter-spell-card?theme=anime`,
+    `${baseurl}/blockchain-web3-facts-card?theme=anime`,
+  ],
+},
     galactic_dusk: {
       info: "Galactic Dusk Theme",
       example: [
@@ -38,6 +54,7 @@ export default async function helpHandler({ req, env }) {
         `${baseurl}/random-facts-card?theme=galactic_dusk`,
         `${baseurl}/space-facts-card?theme=galactic_dusk`,
         `${baseurl}/harry-potter-spell-card?theme=galactic_dusk`,
+        `${baseurl}/blockchain-web3-facts-card?theme=galactic_duck`,
       ],
     },
     aurora_borealis: {
@@ -51,6 +68,7 @@ export default async function helpHandler({ req, env }) {
         `${baseurl}/random-facts-card?theme=aurora_borealis`,
         `${baseurl}/space-facts-card?theme=aurora_borealis`,
         `${baseurl}/harry-potter-spell-card?theme=aurora_borealis`,
+        `${baseurl}/blockchain-web3-facts-card?theme=aurora_borealis`,
       ],
     },
     retro_block: {
@@ -64,6 +82,7 @@ export default async function helpHandler({ req, env }) {
         `${baseurl}/random-facts-card?theme=retro_block`,
         `${baseurl}/space-facts-card?theme=retro_block`,
         `${baseurl}/harry-potter-spell-card?theme=retro_block`,
+        `${baseurl}/blockchain-web3-facts-card?theme=retro_block`,
       ],
     },
     rainbow_vortex: {
@@ -77,6 +96,7 @@ export default async function helpHandler({ req, env }) {
         `${baseurl}/random-facts-card?theme=rainbow_vortex`,
         `${baseurl}/space-facts-card?theme=rainbow_vortex`,
         `${baseurl}/harry-potter-spell-card?theme=rainbow_vortex`,
+        `${baseurl}/blockchain-web3-facts-card?theme=rainbow_vortex`,
       ],
     },
     endless_constellation: {
@@ -90,6 +110,7 @@ export default async function helpHandler({ req, env }) {
         `${baseurl}/random-facts-card?theme=endless_constellation`,
         `${baseurl}/space-facts-card?theme=endless_constellation`,
         `${baseurl}/harry-potter-spell-card?theme=endless_constellation`,
+        `${baseurl}/blockchain-web3-facts-card?theme=endless_constellation`,
       ],
     },
     lemonade: {
@@ -103,6 +124,7 @@ export default async function helpHandler({ req, env }) {
         `${baseurl}/random-facts-card?theme=lemonade`,
         `${baseurl}/space-facts-card?theme=lemonade`,
         `${baseurl}/harry-potter-spell-card?theme=lemonade`,
+        `${baseurl}/blockchain-web3-facts-card?theme=lemonade`,
       ],
     },
     vintage: {
@@ -116,6 +138,7 @@ export default async function helpHandler({ req, env }) {
         `${baseurl}/random-facts-card?theme=vintage`,
         `${baseurl}/space-facts-card?theme=vintage`,
         `${baseurl}/harry-potter-spell-card?theme=vintage`,
+        `${baseurl}/blockchain-web3-facts-card?theme=vintage`,
       ],
     },
     galaxy: {
@@ -127,6 +150,7 @@ export default async function helpHandler({ req, env }) {
         `${baseurl}/motivational-quotes-card?theme=galaxy`,
         `${baseurl}/random-facts-card?theme=galaxy`,
         `${baseurl}/space-facts-card?theme=galaxy`,
+        `${baseurl}/blockchain-web3-facts-card?theme=galaxy`,
       ],
     },
     cyber_grid: {
@@ -140,6 +164,7 @@ export default async function helpHandler({ req, env }) {
         `${baseurl}/random-facts-card?theme=cyber_grid`,
         `${baseurl}/space-facts-card?theme=cyber_grid`,
         `${baseurl}/harry-potter-spell-card?theme=cyber_grid`,
+        `${baseurl}/blockchain-web3-facts-card?theme=cyber_grid`,
       ],
     },
     digital_rain: {
@@ -153,6 +178,7 @@ export default async function helpHandler({ req, env }) {
         `${baseurl}/random-facts-card?theme=digital_rain`,
         `${baseurl}/space-facts-card?theme=digital_rain`,
         `${baseurl}/harry-potter-spell-card?theme=digital_rain`,
+        `${baseurl}/blockchain-web3-facts-card?theme=digital_rain`,
       ],
     },
     custom: {
@@ -194,6 +220,7 @@ export default async function helpHandler({ req, env }) {
         `${baseurl}/random-facts-card?theme=custom&card_color=f0f&font_color=fff&bg_color=000&shadow_color=fff`,
         `${baseurl}/space-facts-card?theme=custom&card_color=ff0&font_color=000&bg_color=000&shadow_color=fff`,
         `${baseurl}/harry-potter-spell-card?theme=custom&card_color=00f&font_color=fff&bg_color=000&shadow_color=fff`,
+        `${baseurl}/blockchain-web3-facts-card?theme=custom&card_color=00f&font_color=fff&bg_color=000&shadow_color=fff`,
       ],
       advanced_examples: [
         `${baseurl}/programming-quotes-card?theme=custom&bg_color=ff69b4&font_color=000000&google_font=Tagesschrift`,
@@ -314,6 +341,15 @@ export default async function helpHandler({ req, env }) {
         example: [`${baseurl}/bhagavad-geeta-card`],
       },
     },
+    "blockchain-web3-facts-card": {
+      info: "Generates a random blockchain fact.",
+      api: {
+        args: {
+          theme: "Theme of card [Optional]",
+        },
+        example: [`${baseurl}/blockchain-web3-facts-card`],
+      },
+    },
     "programming-facts-card": {
       info: "Random programming facts card",
       api: {
@@ -413,6 +449,7 @@ export default async function helpHandler({ req, env }) {
         example: [`${baseurl}/health-tip-card`],
       },
     },
+    
   };
 
   return new Response(JSON.stringify({ themes, cards }), {

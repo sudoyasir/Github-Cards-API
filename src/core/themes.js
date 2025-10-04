@@ -50,6 +50,94 @@ export const HTML_THEMES = {
             </div>
         </div>
     `,
+
+ 'ANIME': `
+<div style="
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    background: linear-gradient(145deg, #0f0f23 0%, #1a0b2e 50%, #2d1b4e 100%);
+    border: 4px solid #8b5cf6;
+    padding: 30px; 
+    width: 420px; 
+    text-align: center; 
+    border-radius: 20px; 
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.5);
+    font-family: Arial, sans-serif;
+">
+    <div style="
+        display: flex;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, #ec4899, #8b5cf6, #06b6d4);
+        margin-bottom: 20px;
+        border-radius: 2px;
+    "></div>
+    <div style="
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        padding: 24px 20px; 
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2));
+        border-radius: 16px; 
+        border: 2px solid rgba(139, 92, 246, 0.6);
+        white-space: pre-line;
+        min-height: 80px;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 14px; 
+        font-weight: 600; 
+        color: #f5f5f5;
+        line-height: 1.6;
+    ">{{card_content}}</div>
+    <div style="
+        display: flex;
+        gap: 4px;
+        width: 100%; 
+        margin-top: 20px;
+    ">
+        <div style="
+            display: flex;
+            flex: 1; 
+            height: 5px; 
+            background: linear-gradient(90deg, #ec4899, #f97316); 
+            border-radius: 3px;
+        "></div>
+        <div style="
+            display: flex;
+            flex: 1; 
+            height: 5px; 
+            background: linear-gradient(90deg, #f97316, #8b5cf6); 
+            border-radius: 3px;
+        "></div>
+        <div style="
+            display: flex;
+            flex: 1; 
+            height: 5px; 
+            background: linear-gradient(90deg, #8b5cf6, #06b6d4); 
+            border-radius: 3px;
+        "></div>
+        <div style="
+            display: flex;
+            flex: 1; 
+            height: 5px; 
+            background: linear-gradient(90deg, #06b6d4, #10b981); 
+            border-radius: 3px;
+        "></div>
+    </div>
+
+    <div style="
+        display: flex;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, #10b981, #06b6d4, #ec4899);
+        margin-top: 20px;
+        border-radius: 2px;
+    "></div>
+</div>
+`
+,
     // PATTERN THEME
     'RETRO_BLOCK': `
         <div style="position:relative;display:flex;width:400px;">

@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "quote": "Blockchain is a decentralized, distributed, and often public, digital ledger that is used to record transactions across many computers so that any involved block cannot be altered retroactively without the alteration of all subsequent blocks.",
+    "lang": "en"
+  },
+  {
+    "id": 2,
+    "quote": "The concept of a cryptographically secured chain of blocks dates back to 1991, described by Stuart Haber and W. Scott Stornetta.",
+    "lang": "en"
+  },
+  {
+    "id": 3,
+    "quote": "Satoshi Nakamoto created the first widely known application of blockchain, the cryptocurrency Bitcoin, in 2008.",
+    "lang": "en"
+  },
+  {
+    "id": 4,
+    "quote": "A 'block' on the blockchain holds a batch of valid transactions, a timestamp, and a cryptographic hash of the previous block.",
+    "lang": "en"
+  },
+  {
+    "id": 5,
+    "quote": "The 'chain' refers to the sequential link between blocks, secured by the cryptographic hash.",
+    "lang": "en"
+  },
+  {
+    "id": 6,
+    "quote": "Blockchain is synonymous with Distributed Ledger Technology (DLT).",
+    "lang": "en"
+  },
+  {
+    "id": 7,
+    "quote": "The three main types of blockchain networks are Public, Private, and Consortium (or Hybrid).",
+    "lang": "en"
+  },
+  {
+    "id": 8,
+    "quote": "Public blockchains (like Bitcoin) are open-source, permissionless, and transparent.",
+    "lang": "en"
+  },
+  {
+    "id": 9,
+    "quote": "Private blockchains are permissioned and controlled by a single organization.",
+    "lang": "en"
+  },
+  {
+    "id": 10,
+    "quote": "Consortium blockchains are controlled by a group of organizations, offering a balance of decentralization and control.",
+    "lang": "en"
+  },
+  {
+    "id": 11,
+    "quote": "Immutability is a key feature, meaning data recorded on the blockchain cannot be easily changed or deleted.",
+    "lang": "en"
+  },
+  {
+    "id": 12,
+    "quote": "Decentralization eliminates the need for a central authority, such as a bank or government, to validate transactions.",
+    "lang": "en"
+  },
+  {
+    "id": 13,
+    "quote": "Consensus mechanisms (like Proof-of-Work or Proof-of-Stake) are used to validate new blocks before they are added to the chain.",
+    "lang": "en"
+  },
+  {
+    "id": 14,
+    "quote": "Proof-of-Work (PoW) is the mechanism used by Bitcoin, requiring computational effort to solve complex math problems.",
+    "lang": "en"
+  },
+  {
+    "id": 15,
+    "quote": "Proof-of-Stake (PoS) is a more energy-efficient alternative where validators are chosen based on the amount of cryptocurrency they 'stake'.",
+    "lang": "en"
+  },
+  {
+    "id": 16,
+    "quote": "Ethereum, another major blockchain, transitioned from Proof-of-Work to Proof-of-Stake in 2022 (The Merge).",
+    "lang": "en"
+  },
+  {
+    "id": 17,
+    "quote": "The first block in a blockchain is called the 'Genesis Block' (Block 0).",
+    "lang": "en"
+  },
+  {
+    "id": 18,
+    "quote": "Blockchain is used for more than just cryptocurrencies, including supply chain management, voting, healthcare, and real estate.",
+    "lang": "en"
+  },
+  {
+    "id": 19,
+    "quote": "Smart contracts are self-executing contracts with the terms of the agreement directly written into code, running on a blockchain.",
+    "lang": "en"
+  },
+  {
+    "id": 20,
+    "quote": "The financial sector holds a significant portion of the total market share of blockchain technology.",
+    "lang": "en"
+  },
+  {
+    "id": 21,
+    "quote": "Blockchain's transparency allows every network participant to view the shared ledger.",
+    "lang": "en"
+  },
+  {
+    "id": 22,
+    "quote": "It is estimated that blockchain can reduce banks' infrastructure costs by up to 30%.",
+    "lang": "en"
+  },
+  {
+    "id": 23,
+    "quote": "The business value of blockchain is expected to grow to $3.1 trillion by 2030.",
+    "lang": "en"
+  },
+  {
+    "id": 24,
+    "quote": "Non-Fungible Tokens (NFTs) are digital assets that use blockchain to prove unique ownership and authenticity.",
+    "lang": "en"
+  },
+  {
+    "id": 25,
+    "quote": "Blockchain can enhance data security for healthcare records due to its tamper-proof nature.",
+    "lang": "en"
+  },
+  {
+    "id": 26,
+    "quote": "A 51% attack is a theoretical scenario where one entity gains control of more than half of a blockchain's mining power or staking pool, potentially allowing them to manipulate the ledger.",
+    "lang": "en"
+  },
+  {
+    "id": 27,
+    "quote": "The United States is one of the largest spenders on blockchain technology globally.",
+    "lang": "en"
+  },
+  {
+    "id": 28,
+    "quote": "Blockchain technology is being integrated into the Metaverse for asset ownership and identity.",
+    "lang": "en"
+  },
+  {
+    "id": 29,
+    "quote": "Some countries are exploring Central Bank Digital Currencies (CBDCs) based on blockchain or DLT.",
+    "lang": "en"
+  },
+  {
+    "id": 30,
+    "quote": "Blockchain transactions are recorded using cryptographic keys—a public key (address) and a private key (password).",
+    "lang": "en"
+  },
+  {
+    "id": 31,
+    "quote": "The speed of transactions (throughput) is a common challenge for public blockchains like Bitcoin.",
+    "lang": "en"
+  },
+  {
+    "id": 32,
+    "quote": "Blockchain has the potential to streamline voting systems by making them secure and transparent.",
+    "lang": "en"
+  },
+  {
+    "id": 33,
+    "quote": "Many governments have plans to invest in blockchain technology for various operations.",
+    "lang": "en"
+  },
+  {
+    "id": 34,
+    "quote": "A blockchain is continuously growing as 'completed' blocks are added to it with a new set of recordings.",
+    "lang": "en"
+  },
+  {
+    "id": 35,
+    "quote": "Blockchain is considered a foundational technology, capable of building new foundations for society and economics.",
+    "lang": "en"
+  },
+  {
+    "id": 36,
+    "quote": "Nodes are the computers or devices that maintain a copy of the blockchain ledger and validate transactions.",
+    "lang": "en"
+  },
+  {
+    "id": 37,
+    "quote": "Hashing is the process that converts input data of any size into a fixed-size string of characters, creating a unique 'fingerprint' for each block.",
+    "lang": "en"
+  },
+  {
+    "id": 38,
+    "quote": "Changing even a single transaction in a block requires re-hashing that block and all subsequent blocks, which is computationally infeasible for a decentralized public chain.",
+    "lang": "en"
+  },
+  {
+    "id": 39,
+    "quote": "Cryptocurrencies provide an incentive (rewards) for miners or validators to secure the network.",
+    "lang": "en"
+  },
+  {
+    "id": 40,
+    "quote": "The technology promotes peer-to-peer transactions without the need for intermediaries.",
+    "lang": "en"
+  },
+  {
+    "id": 41,
+    "quote": "The first commercial transaction using Bitcoin was for two pizzas, purchased for 10,000 BTC in 2010.",
+    "lang": "en"
+  },
+  {
+    "id": 42,
+    "quote": "The global blockchain technology market is projected to reach hundreds of billions of dollars within the next decade.",
+    "lang": "en"
+  },
+  {
+    "id": 43,
+    "quote": "Blockchain is being explored to reduce fraud in digital advertising by providing transparent transaction records.",
+    "lang": "en"
+  },
+  {
+    "id": 44,
+    "quote": "The technology is revolutionizing content distribution by helping creators safeguard their rights.",
+    "lang": "en"
+  },
+  {
+    "id": 45,
+    "quote": "Blockchain could help with digital identification for the billions of people worldwide who lack formal ID.",
+    "lang": "en"
+  },
+  {
+    "id": 46,
+    "quote": "An advantage of blockchain is its high Byzantine fault tolerance, meaning it can still function even if some network nodes are compromised.",
+    "lang": "en"
+  },
+  {
+    "id": 47,
+    "quote": "The use of 'tokenization' allows the value of an asset to be converted into a digital token on a blockchain.",
+    "lang": "en"
+  },
+  {
+    "id": 48,
+    "quote": "Blockchain can expedite property trading by securely storing ownership records and eliminating protracted legal processes.",
+    "lang": "en"
+  },
+  {
+    "id": 49,
+    "quote": "Layer 2 scaling solutions are being developed to increase the transaction capacity and speed of main blockchains (Layer 1).",
+    "lang": "en"
+  },
+  {
+    "id": 50,
+    "quote": "As of a few years ago, more than 80 million blockchain wallets were registered globally for cryptocurrency use.",
+    "lang": "en"
+  }
+]

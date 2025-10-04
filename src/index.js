@@ -27,6 +27,7 @@ import frenchWordOfTheDay from './cards/french_word_of_the_day'
 import healthTip from './cards/health-tip-card'
 import myCard from './cards/my-card'
 import spaceFacts from './cards/space-facts'
+import blockchainFacts from './cards/blockchain-web3-facts';
 
 // Help route
 import helpHandler from './help'
@@ -41,6 +42,7 @@ const availableCards = {
   '/team-work-quote-card': teamWorkQuote,
   '/breaking-bad-quote-card': breakingBadQuote,
   '/bhagavad-geeta-card': bhagavadGeetaQuote,
+  '/blockchain-web3-facts-card':blockchainFacts,
   '/programming-facts-card': programmingFacts,
   '/spanish-jokes-card': spanishJokes,
   '/top-tweets-card': topTweets,
